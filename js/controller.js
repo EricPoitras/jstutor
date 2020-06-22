@@ -1,15 +1,15 @@
 function nextLine(code) {
-	line++;
-	let array = code.split(/\r?\n/),
-		codefilter = "";
-	for (let i = 0; i < line; i++) {
-		codefilter += array[i] + "\n";
-	}
-	if (line >= array.length) {
+	//let array = code.split(/\r?\n/),
+	//	codefilter = "";
+	//for (let i = 0; i < line; i++) {
+	//	codefilter += array[i] + "\n";
+	//}
+	if (line >= chunks.length - 1) {
 		btn_next.disabled = true;
 		btn_run.disabled = false;
 	}
-	flask.updateCode(codefilter);
+	flask.updateCode(chunks[line]);
+    line++;
 }
 
 function runProgram(program) {
@@ -17,5 +17,7 @@ function runProgram(program) {
 }
 
 function loadProblem() {
-	flask.updateCode(data[0].problem);
+	flask.updateCode(chunks[0]);
+    let code = flask.getCode();
+	output = acorn.parse(code);
 }
