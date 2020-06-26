@@ -84,10 +84,10 @@ var parse = {
     ],"sourceType":"script"};
 
 // Generate code based on the parsed results
-console.log(escodegen.generate(parse.body[0]));
-console.log(escodegen.generate(parse.body[0].body.body[0]));
-console.log(escodegen.generate(parse.body[0].body.body[1]));
-console.log(escodegen.generate(parse.body[1]));
+//console.log(escodegen.generate(parse.body[0]));
+//console.log(escodegen.generate(parse.body[0].body.body[0]));
+//console.log(escodegen.generate(parse.body[0].body.body[1]));
+//console.log(escodegen.generate(parse.body[1]));
 
 var chunks = [
     escodegen.generate(parse),
