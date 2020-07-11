@@ -1,9 +1,4 @@
-var btn_next = document.getElementById("btn_next"),
-	btn_run = document.getElementById("btn_run");
-
-var text_output = document.getElementById("text_output");
-
-var line = 0;
-
-const editorElem = document.getElementById("editor");
-const flask = new CodeFlask(editorElem, { language: "js", lineNumbers: true });
+const editorElem = document.getElementById("main-editor");
+const flask = new CodeFlask(editorElem, { language: "js", lineNumbers: true, readonly: true });
+const editorElem2 = document.getElementById("node-editor");
+const flask2 = new CodeFlask(editorElem2, { language: "js", lineNumbers: false });
